@@ -1,4 +1,3 @@
-# %load "C:\Users\Ziyad\Desktop\Kernel_methods\kernel.py"
 from math import exp, sqrt
 import numpy.linalg as npl
 import numpy as np
@@ -102,7 +101,10 @@ class Gk_PCA:
         v=v[:,order]
         i=0
         while w[i]>=0:
-            i=i+1
+            if i<n-1:
+                i=i+1
+            else:
+                break
         w=w[0:i]
         v=v[:,0:i]
         
